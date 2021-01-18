@@ -1,7 +1,12 @@
 import React from "react";
+import ProfileHeader from "../components/profileHeader";
 
 const LandingPage = () => {
-  return <div className="button">LandingPage</div>;
+  return (
+    <div>
+      <ProfileHeader />
+    </div>
+  );
 };
 
 export default LandingPage;

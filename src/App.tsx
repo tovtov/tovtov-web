@@ -1,4 +1,4 @@
-import React from "react";
+import react from "react";
 import logo from "./logo.svg";
 import LandingPage from "./pages/landingPage";
 import "./App.scss";
