@@ -7,9 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <button className="button is-primary ">Edit and save to reload.</button>
         <a
           className="App-link"
           href="https://reactjs.org"
