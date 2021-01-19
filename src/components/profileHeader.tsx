@@ -6,12 +6,12 @@ const ProfileHeader = () => {
   return (
     <div className="container is-fullhd">
       <Gravatar />
-      <nav className="navbar is-dark userName">
-        <div className="">
-          <div className="navbar-item">User Name</div>
-        </div>
+      <nav className="navbar is-dark topNav">
+        <div className="navbar-item userName">User Name</div>
       </nav>
-      <nav className="navbar is-white-ter"></nav>
+      <nav className="navbar is-white-ter">
+        <div className="kudosNav">Kudos</div>
+      </nav>
     </div>
   );
 };
