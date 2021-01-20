@@ -1,11 +1,13 @@
 import React from "react";
 import Gravatar from "./gravatar";
-import "../styles/profileHeader.scss";
+import "./profileHeader.scss";
+
+let img = "https://bulma.io/images/placeholders/128x128.png";
 
 const ProfileHeader = () => {
   return (
     <div className="container is-fullhd">
-      <Gravatar />
+      <Gravatar userImg={img} />
       <nav className="navbar is-dark topNav">
         <div className="navbar-item userName">User Name</div>
       </nav>

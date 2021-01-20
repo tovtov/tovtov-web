@@ -1,12 +1,12 @@
 import react from "react";
 import logo from "./logo.svg";
-import LandingPage from "./pages/landingPage";
+import PageProfile from "./pages/pageProfile";
 import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <PageProfile />
     </div>
   );
 }

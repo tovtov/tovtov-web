@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileHeader from "../components/profileHeader";
 
-const LandingPage = () => {
+const PageProfile = () => {
   return (
     <div>
       <ProfileHeader />
@@ -9,4 +9,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default PageProfile;
