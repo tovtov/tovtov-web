@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+}
+
+.navbar {
+  z-index: 1;
+}
+.topNav {
+  height: 6em;
+}
+.userName {
+  padding-left: 9em;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.kudosNav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 9em;
+}

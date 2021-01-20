@@ -1,5 +1,10 @@
-import react from "react";
+import React, { FunctionComponent } from "react";
 import "../styles/kudo.scss";
+import { User } from "../database/userData";
+
+export interface KudoProps {
+  kudo: User;
+}
 
 const Kudo = () => {
   return (
