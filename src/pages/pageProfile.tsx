@@ -11,17 +11,19 @@ const PageProfile: FunctionComponent<pageProfileProps> = (kudos, user) => {
   return (
     <div>
       <ProfileHeader />
-      <section className=" section ">
-        {UserData.map((user: User, index: number) =>
-          user.kudos.map((x: SingleKudo, i: number) => (
-            <div className="notification is-light">
-              <p className="title is-4 is-align-items-flex-end kudosTitle">
-                Kudos
-              </p>
-              <Kudo />
-            </div>
-          ))
-        )}
+      <section className="section">
+        {UserData.map((user: User, index: number) => (
+          <div className="notification">
+            <p className="title is-4 is-align-items-flex-end kudosTitle">
+              Kudos
+            </p>
+            {user.kudos.map((singleKudo: SingleKudo, i: number) => (
+              <div className="notification">
+                <Kudo kudo={singleKudo} />
+              </div>
+            ))}
+          </div>
+        ))}
       </section>
     </div>
   );

@@ -1,12 +1,13 @@
 import React, { FunctionComponent } from "react";
 import "../styles/kudo.scss";
-import { User } from "../database/userData";
+import { SingleKudo } from "../database/userData";
 
 export interface KudoProps {
-  kudo: User;
+  kudo: SingleKudo;
 }
 
-const Kudo = () => {
+const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
+  const kudo = KudoProps.kudo;
   return (
     <div className="box tile is-ancestor">
       <div className="tile is-parent is-1 media-left">
@@ -19,16 +20,13 @@ const Kudo = () => {
           <div className="content">
             <div className="tile">
               <span className="has-text-weight-light">
-                <strong> John Smith</strong> @johnsmith • September 20th, 2019
+                <strong> {kudo.giversName}</strong> {kudo.giversUserName} •{" "}
+                {kudo.date}
               </span>
             </div>
           </div>
         </div>
-        <div className="tile kudoParagraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare
-          magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa
-          sem. Etiam finibus odio quis feugiat facilisis.
-        </div>
+        <div className="tile kudoParagraph">{kudo.kudo}</div>
       </div>
     </div>
   );

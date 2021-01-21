@@ -1,9 +1,10 @@
+let theDate = new Date().toLocaleDateString();
 export interface SingleKudo {
   giverImg: string;
   giversName: string;
   giversUserName: string;
   kudo: string;
-  date: Date;
+  date: string;
 }
 export interface User {
   userImg: string;
@@ -23,14 +24,14 @@ export const UserData: Array<User> = [
         giversName: "giver",
         giversUserName: "@giver",
         kudo: "heres some props!",
-        date: new Date(),
+        date: theDate,
       },
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",
         giversName: "giver2",
         giversUserName: "@giver2",
         kudo: "making things happen!",
-        date: new Date(),
+        date: theDate,
       },
     ],
   },
