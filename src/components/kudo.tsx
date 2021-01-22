@@ -4,7 +4,6 @@ import { SingleKudo } from "../database/userData";
 
 export interface KudoProps {
   kudo: SingleKudo;
-  // key: number;
 }
 
 const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
@@ -13,7 +12,7 @@ const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
     <div data-testid="kudoContainer" className=" box tile is-ancestor">
       <div className="tile is-parent is-1 media-left">
         <div className="image is-64x64">
-          <img src="https://bulma.io/images/placeholders/128x128.png" />
+          <img src={kudo.giverImg} alt="kudo giver img" />
         </div>
       </div>
       <div className="tile is-11 is-vertical is-parent">
@@ -21,8 +20,10 @@ const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
           <div className="content">
             <div className="tile">
               <span className="has-text-weight-light">
-                <strong> {kudo.giversName}</strong> {kudo.giversUserName} •{" "}
-                {kudo.date}
+                <strong> {kudo.giversName}</strong>{" "}
+                <span>{kudo.giversUserName}</span>
+                <span> •</span>
+                <span> {kudo.date}</span>
               </span>
             </div>
           </div>

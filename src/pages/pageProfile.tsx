@@ -10,7 +10,10 @@ export interface pageProfileProps {
 const PageProfile: FunctionComponent<pageProfileProps> = () => {
   return (
     <div>
-      <ProfileHeader userImg={UserData[0].userImg} />
+      <ProfileHeader
+        kudosCounter={UserData[0].kudos.length}
+        userImg={UserData[0].userImg}
+      />
       <section className="section">
         {UserData.map((user: User, index: number) => (
           <div key={index} className="notification">
