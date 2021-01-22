@@ -1,11 +1,16 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import Gravatar from "./gravatar";
 import "../styles/profileHeader.scss";
 
-const ProfileHeader = () => {
+export interface profileHeaderProps {
+  userImg: string; //the users chosen plants interface
+}
+const ProfileHeader: FunctionComponent<profileHeaderProps> = (
+  profileHeaderProps
+) => {
   return (
-    <div className="container is-fullhd">
-      <Gravatar />
+    <div className="container is-fullhd" data-testid="profileHeaderComp">
+      <Gravatar userImg={profileHeaderProps.userImg} />
       <nav className="navbar is-dark topNav">
         <div className="navbar-item userName">User Name</div>
       </nav>

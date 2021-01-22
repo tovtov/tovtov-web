@@ -7,10 +7,10 @@ import "./pageProfile.scss";
 export interface pageProfileProps {
   user?: User; //the users chosen plants interface
 }
-const PageProfile: FunctionComponent<pageProfileProps> = (kudos, user) => {
+const PageProfile: FunctionComponent<pageProfileProps> = () => {
   return (
     <div>
-      <ProfileHeader />
+      <ProfileHeader userImg={UserData[0].userImg} />
       <section className="section">
         {UserData.map((user: User, index: number) => (
           <div key={index} className="notification">

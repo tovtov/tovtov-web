@@ -10,7 +10,7 @@ export interface KudoProps {
 const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
   const kudo = KudoProps.kudo;
   return (
-    <div className="box tile is-ancestor">
+    <div data-testid="kudoContainer" className=" box tile is-ancestor">
       <div className="tile is-parent is-1 media-left">
         <div className="image is-64x64">
           <img src="https://bulma.io/images/placeholders/128x128.png" />
