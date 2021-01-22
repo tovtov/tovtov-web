@@ -4,6 +4,7 @@ import { SingleKudo } from "../database/userData";
 
 export interface KudoProps {
   kudo: SingleKudo;
+  // key: number;
 }
 
 const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {

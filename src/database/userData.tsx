@@ -1,4 +1,4 @@
-let theDate = new Date().toLocaleDateString();
+const theDate = new Date().toLocaleDateString();
 export interface SingleKudo {
   giverImg: string;
   giversName: string;

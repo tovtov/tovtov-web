@@ -13,12 +13,12 @@ const PageProfile: FunctionComponent<pageProfileProps> = (kudos, user) => {
       <ProfileHeader />
       <section className="section">
         {UserData.map((user: User, index: number) => (
-          <div className="notification">
+          <div key={index} className="notification">
             <p className="title is-4 is-align-items-flex-end kudosTitle">
               Kudos
             </p>
             {user.kudos.map((singleKudo: SingleKudo, i: number) => (
-              <div className="notification">
+              <div key={i} className="notification">
                 <Kudo kudo={singleKudo} />
               </div>
             ))}
