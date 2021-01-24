@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import "../styles/kudo.scss";
+import "./kudo.scss";
 import { SingleKudo } from "../database/userData";
 
 export interface KudoProps {

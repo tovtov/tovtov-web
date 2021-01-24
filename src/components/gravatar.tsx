@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import "../styles/gravatar.scss";
+import "./gravatar.scss";
 
 export interface gravatarProps {
   userImg: string; //the users chosen plants interface

@@ -36,3 +36,6 @@ export const UserData: Array<User> = [
     ],
   },
 ];
+export interface User {
+  userImg: string;
+}
