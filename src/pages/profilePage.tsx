@@ -1,18 +1,20 @@
 import React, { FunctionComponent } from "react";
 import ProfileHeader from "../components/profileHeader";
 import Kudo from "../components/kudo";
-import { User, UserData, SingleKudo } from "../database/userData";
-import "./pageProfile.scss";
+import { SingleKudo } from "../models/singleKudoInterface";
+import { User } from "../models/userInterface";
+import { UserData } from "../database/userData";
+import "./profilePage.scss";
 
-export interface pageProfileProps {
-  user?: User; //the users chosen plants interface
+export interface ProfilePageProps {
+  user?: User;
 }
-const PageProfile: FunctionComponent<pageProfileProps> = () => {
+const ProfilePage: FunctionComponent<ProfilePageProps> = (ProfilePageProps) => {
   return (
     <div>
       <ProfileHeader
-        kudosCounter={UserData[0].kudos.length}
-        userImg={UserData[0].userImg}
+        kudosCounter={ProfilePageProps.user?.kudos.length as number}
+        userImg={ProfilePageProps.user?.userImg as string}
       />
       <section className="section">
         {UserData.map((user: User, index: number) => (
@@ -32,4 +34,4 @@ const PageProfile: FunctionComponent<pageProfileProps> = () => {
   );
 };
 
-export default PageProfile;
+export default ProfilePage;

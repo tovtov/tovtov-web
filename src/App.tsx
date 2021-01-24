@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
-import PageProfile from "./pages/pageProfile";
+import ProfilePage from "./pages/profilePage";
 import "./App.scss";
 
 const App = () => {
   return (
     <div className="App">
-      <PageProfile />
+      <ProfilePage />
     </div>
   );
 };

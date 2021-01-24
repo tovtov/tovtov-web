@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import "./kudo.scss";
-import { SingleKudo } from "../database/userData";
+import { SingleKudo } from "../models/singleKudoInterface";
 
 export interface KudoProps {
   kudo: SingleKudo;

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { theDate } from "../database/userData";
-import PageProfile from "./pageProfile";
+import PageProfile from "./profilePage";
 
 //Once context is set up will this to test data is being passed.
 // const UserData = [

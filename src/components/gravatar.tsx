@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import "./gravatar.scss";
 
 export interface gravatarProps {
-  userImg: string; //the users chosen plants interface
+  userImg: string;
 }
 const Gravatar: FunctionComponent<gravatarProps> = (gravatarProps) => {
   return (

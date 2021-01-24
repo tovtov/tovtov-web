@@ -1,17 +1,6 @@
+import { User } from "../models/userInterface";
+
 export const theDate = new Date().toLocaleDateString();
-export interface SingleKudo {
-  giverImg: string;
-  giversName: string;
-  giversUserName: string;
-  kudo: string;
-  date: string;
-}
-export interface User {
-  userImg: string;
-  userName: string;
-  fullName: string;
-  kudos: SingleKudo[];
-}
 
 export const UserData: Array<User> = [
   {
@@ -36,6 +25,3 @@ export const UserData: Array<User> = [
     ],
   },
 ];
-export interface User {
-  userImg: string;
-}

@@ -2,10 +2,8 @@ import React, { FunctionComponent } from "react";
 import Gravatar from "./gravatar";
 import "./profileHeader.scss";
 
-let img = "https://bulma.io/images/placeholders/128x128.png";
-
 export interface profileHeaderProps {
-  userImg: string; //the users chosen plants interface
+  userImg: string;
   kudosCounter: number;
 }
 const ProfileHeader: FunctionComponent<profileHeaderProps> = (
