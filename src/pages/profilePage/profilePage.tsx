@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import ProfileHeader from "../../components/profileHeader/profileHeader";
 import Kudo from "../../components/kudo/kudo";
 import { SingleKudo } from "../../models/singleKudoInterface";
@@ -15,15 +15,16 @@ const ProfilePage: FunctionComponent = () => {
       <ProfileHeader
         kudosCounter={userInfo.kudos.length}
         userImg={userInfo.userImg}
+        kudosGivenCounter={userInfo.kudosGiven.length}
       />
       <section className="section">
         {userData.map((user: User, index: number) => (
-          <div key={index} className="notification">
+          <div key={index} className="container">
             <p className="title is-4 is-align-items-flex-end kudosTitle">
               Kudos
             </p>
             {user.kudos.map((singleKudo: SingleKudo, i: number) => (
-              <div key={i} className="notification">
+              <div key={i} className="">
                 <Kudo kudo={singleKudo} />
               </div>
             ))}

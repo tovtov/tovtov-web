@@ -8,6 +8,14 @@ export const UserData: Array<User> = [
     userImg: "https://bulma.io/images/placeholders/128x128.png",
     userName: "@testName",
     fullName: "test name",
+    kudosGiven: [
+      {
+        date: theDate,
+        givenToUserName: "@BorisVeltman",
+        givenToName: "Boris Veltman",
+        kudo: "What a weirdo this dude is",
+      },
+    ],
     kudos: [
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",

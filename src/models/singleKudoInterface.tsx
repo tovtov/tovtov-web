@@ -5,3 +5,10 @@ export interface SingleKudo {
   kudo: string;
   date: string;
 }
+
+export interface SingleKudoGiven {
+  date: string;
+  givenToUserName: string;
+  givenToName: string;
+  kudo: string;
+}

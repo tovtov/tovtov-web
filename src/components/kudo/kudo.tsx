@@ -9,7 +9,10 @@ export interface KudoProps {
 const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
   const kudo = KudoProps.kudo;
   return (
-    <div data-testid="kudoContainer" className=" box tile is-ancestor">
+    <div
+      data-testid="kudoContainer"
+      className="kudoContainer notification box tile "
+    >
       <div className="tile is-parent is-1 media-left">
         <div className="image is-64x64">
           <img src={kudo.giverImg} alt="kudo giver img" />
@@ -17,12 +20,12 @@ const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
       </div>
       <div className="tile is-11 is-vertical is-parent">
         <div className="tile">
-          <div className="content">
+          <div className="kudoDetails">
             <div className="tile">
               <span className="has-text-weight-light">
-                <strong> {kudo.giversName}</strong>{" "}
+                <strong> {kudo.giversName}</strong>
                 <span>{kudo.giversUserName}</span>
-                <span> •</span>
+                <span> • </span>
                 <span> {kudo.date}</span>
               </span>
             </div>

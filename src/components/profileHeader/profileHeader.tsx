@@ -5,12 +5,12 @@ import "./profileHeader.scss";
 export interface profileHeaderProps {
   userImg: string;
   kudosCounter: number;
+  kudosGivenCounter: number;
 }
 
 const ProfileHeader: FunctionComponent<profileHeaderProps> = (
   profileHeaderProps
 ) => {
-  console.log(profileHeaderProps.userImg);
   return (
     <div className="container is-fullhd" data-testid="profileHeaderComp">
       <Gravatar userImg={profileHeaderProps.userImg} />
@@ -18,10 +18,18 @@ const ProfileHeader: FunctionComponent<profileHeaderProps> = (
       <nav className="navbar is-dark topNav">
         <div className="navbar-item userName">User Name</div>
       </nav>
-      <nav className="navbar is-white-ter">
-        <div className="kudosNav">
-          <span>Total Kudos: </span>
-          <span>{profileHeaderProps.kudosCounter}</span>
+      <nav className="navbar tile is-white-ter">
+        <div className="kudosNav tile is-vertical is-4">
+          <span className="tile has-text-weight-semibold">
+            {profileHeaderProps.kudosCounter}
+          </span>
+          <span className="tile has-text-weight-light">Kudos Recieved </span>
+        </div>
+        <div className="kudosNav tile is-vertical is-5">
+          <span className="tile has-text-weight-semibold">
+            {profileHeaderProps.kudosGivenCounter}
+          </span>
+          <span className="tile has-text-weight-light">Kudos Given </span>
         </div>
       </nav>
     </div>
