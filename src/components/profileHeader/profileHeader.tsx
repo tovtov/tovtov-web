@@ -1,14 +1,16 @@
 import React, { FunctionComponent } from "react";
-import Gravatar from "./gravatar";
+import Gravatar from "../gravatar/gravatar";
 import "./profileHeader.scss";
 
 export interface profileHeaderProps {
   userImg: string;
   kudosCounter: number;
 }
+
 const ProfileHeader: FunctionComponent<profileHeaderProps> = (
   profileHeaderProps
 ) => {
+  console.log(profileHeaderProps.userImg);
   return (
     <div className="container is-fullhd" data-testid="profileHeaderComp">
       <Gravatar userImg={profileHeaderProps.userImg} />

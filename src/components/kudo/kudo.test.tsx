@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Kudo from "./kudo";
-import { theDate } from "../database/userData";
+import { theDate } from "../../database/userData";
 
 const SingleKudo = {
   giverImg: "https://bulma.io/images/placeholders/128x128.png",
