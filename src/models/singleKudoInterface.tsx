@@ -1,4 +1,4 @@
-export interface SingleKudo {
+export interface SingleKudoReceived {
   giverImg: string;
   giversName: string;
   giversUserName: string;

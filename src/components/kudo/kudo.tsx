@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
 import "./kudo.scss";
-import { SingleKudo } from "../../models/singleKudoInterface";
+import { SingleKudoReceived } from "../../models/singleKudoInterface";
 import { theDate } from "../../database/userData";
 
-const Kudo: FunctionComponent<SingleKudo> = (SingleKudo) => {
-  const kudo = SingleKudo;
+const Kudo: FunctionComponent<SingleKudoReceived> = (SingleKudoReceived) => {
+  const kudo = SingleKudoReceived;
   return (
     <div
       data-testid="kudoContainer"

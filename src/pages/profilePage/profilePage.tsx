@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import ProfileHeader from "../../components/profileHeader/profileHeader";
 import Kudo from "../../components/kudo/kudo";
-import { SingleKudo } from "../../models/singleKudoInterface";
+import { SingleKudoReceived } from "../../models/singleKudoInterface";
 import { User } from "../../models/userInterface";
 import { UserData } from "../../database/userData";
 import "./profilePage.scss";
@@ -13,7 +13,7 @@ const ProfilePage: FunctionComponent = () => {
   return (
     <div>
       <ProfileHeader
-        kudosCounter={userInfo.kudos.length}
+        kudosCounter={userInfo.kudosReceived.length}
         userImg={userInfo.userImg}
         kudosGivenCounter={userInfo.kudosGiven.length}
       />
@@ -23,11 +23,13 @@ const ProfilePage: FunctionComponent = () => {
             <p className="title is-4 is-align-items-flex-end kudosTitle">
               Kudos
             </p>
-            {user.kudos.map((singleKudo: SingleKudo, i: number) => (
-              <div key={i} className="">
-                <Kudo {...singleKudo} />
-              </div>
-            ))}
+            {user.kudosReceived.map(
+              (singleKudo: SingleKudoReceived, i: number) => (
+                <div key={i} className="">
+                  <Kudo {...singleKudo} />
+                </div>
+              )
+            )}
           </div>
         ))}
       </section>

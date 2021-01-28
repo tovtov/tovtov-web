@@ -1,7 +1,6 @@
 import { User } from "../models/userInterface";
 
 //this file is dummy code until I have actual data to replcae it
-
 export const theDate = (date: number) => {
   return new Date(date * 1000).toLocaleDateString();
 };
@@ -19,7 +18,7 @@ export const UserData: Array<User> = [
         kudo: "What a weirdo this dude is",
       },
     ],
-    kudos: [
+    kudosReceived: [
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",
         giversName: "giver",
