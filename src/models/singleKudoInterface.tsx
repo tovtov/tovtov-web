@@ -3,11 +3,11 @@ export interface SingleKudo {
   giversName: string;
   giversUserName: string;
   kudo: string;
-  date: string;
+  date: number;
 }
 
 export interface SingleKudoGiven {
-  date: string;
+  date: number;
   givenToUserName: string;
   givenToName: string;
   kudo: string;

@@ -1,7 +1,10 @@
 import { User } from "../models/userInterface";
 
 //this file is dummy code until I have actual data to replcae it
-export const theDate = new Date().toLocaleDateString();
+
+export const theDate = (date: number) => {
+  return new Date(date * 1000).toLocaleDateString();
+};
 
 export const UserData: Array<User> = [
   {
@@ -10,7 +13,7 @@ export const UserData: Array<User> = [
     fullName: "test name",
     kudosGiven: [
       {
-        date: theDate,
+        date: 1546108200,
         givenToUserName: "@BorisVeltman",
         givenToName: "Boris Veltman",
         kudo: "What a weirdo this dude is",
@@ -22,14 +25,14 @@ export const UserData: Array<User> = [
         giversName: "giver",
         giversUserName: "@giver",
         kudo: "heres some props!",
-        date: theDate,
+        date: 1546108200,
       },
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",
         giversName: "giver2",
         giversUserName: "@giver2",
         kudo: "making things happen!",
-        date: theDate,
+        date: 1546108200,
       },
     ],
   },

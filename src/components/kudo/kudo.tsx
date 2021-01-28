@@ -1,13 +1,10 @@
 import React, { FunctionComponent } from "react";
 import "./kudo.scss";
 import { SingleKudo } from "../../models/singleKudoInterface";
+import { theDate } from "../../database/userData";
 
-export interface KudoProps {
-  kudo: SingleKudo;
-}
-
-const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
-  const kudo = KudoProps.kudo;
+const Kudo: FunctionComponent<SingleKudo> = (SingleKudo) => {
+  const kudo = SingleKudo;
   return (
     <div
       data-testid="kudoContainer"
@@ -26,7 +23,7 @@ const Kudo: FunctionComponent<KudoProps> = (KudoProps) => {
                 <strong> {kudo.giversName}</strong>
                 <span>{kudo.giversUserName}</span>
                 <span> • </span>
-                <span> {kudo.date}</span>
+                <span> {theDate(kudo.date)}</span>
               </span>
             </div>
           </div>

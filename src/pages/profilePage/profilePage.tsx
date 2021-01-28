@@ -25,7 +25,7 @@ const ProfilePage: FunctionComponent = () => {
             </p>
             {user.kudos.map((singleKudo: SingleKudo, i: number) => (
               <div key={i} className="">
-                <Kudo kudo={singleKudo} />
+                <Kudo {...singleKudo} />
               </div>
             ))}
           </div>

@@ -2,13 +2,13 @@ import React, { FunctionComponent } from "react";
 import Gravatar from "../gravatar/gravatar";
 import "./profileHeader.scss";
 
-export interface profileHeaderProps {
+export interface ProfileHeaderProps {
   userImg: string;
   kudosCounter: number;
   kudosGivenCounter: number;
 }
 
-const ProfileHeader: FunctionComponent<profileHeaderProps> = (
+const ProfileHeader: FunctionComponent<ProfileHeaderProps> = (
   profileHeaderProps
 ) => {
   return (
@@ -25,7 +25,7 @@ const ProfileHeader: FunctionComponent<profileHeaderProps> = (
           </span>
           <span className="tile has-text-weight-light">Kudos Recieved </span>
         </div>
-        <div className="kudosNav tile is-vertical is-5">
+        <div className="kudosNav tile is-vertical is-3">
           <span className="tile has-text-weight-semibold">
             {profileHeaderProps.kudosGivenCounter}
           </span>
