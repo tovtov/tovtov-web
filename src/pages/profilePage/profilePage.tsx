@@ -8,14 +8,14 @@ import "./profilePage.scss";
 
 const ProfilePage: FunctionComponent = () => {
   const [userData] = useState<Array<User>>(UserData);
-  const userInfo = userData[0];
+  const { kudosGiven, kudosReceived, userImg } = userData[0];
 
   return (
     <div>
       <ProfileHeader
-        kudosCounter={userInfo.kudosReceived.length}
-        userImg={userInfo.userImg}
-        kudosGivenCounter={userInfo.kudosGiven.length}
+        kudosReceivedCounter={kudosReceived.length}
+        userImg={userImg}
+        kudosGivenCounter={kudosGiven.length}
       />
       <section className="section">
         {userData.map((user: User, index: number) => (

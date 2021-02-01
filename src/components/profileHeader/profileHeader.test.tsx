@@ -25,7 +25,7 @@ describe("ProfileHeader", () => {
     render(
       <ProfileHeader
         userImg={userImg}
-        kudosCounter={kudosCounter}
+        kudosReceivedCounter={kudosCounter}
         kudosGivenCounter={kudosGivenCounter}
       />
     );

@@ -1,7 +1,7 @@
 import { User } from "../models/userInterface";
 
 //this file is dummy code until I have actual data to replcae it
-export const theDate = (date: number) => {
+export const toReadableDate = (date: number) => {
   return new Date(date * 1000).toLocaleDateString();
 };
 
