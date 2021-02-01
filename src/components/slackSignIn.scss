@@ -1,0 +1,22 @@
+// @import "../../node_modules/bulma/sass/elements/box.sass";
+
+.linkDivider {
+  padding: 0.5rem 0.75rem;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+}
+.signBox {
+  text-align: center;
+}
+.slackBtn {
+  width: 12em;
+}
+
+.navbar-item {
+  :hover {
+    text-decoration: none;
+  }
+}

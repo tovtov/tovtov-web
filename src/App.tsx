@@ -1,13 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.scss";
 import SignIn from "./components/slackSignIn";
 
 function App() {
   return (
-    <div className="App">
-      <SignIn />
-    </div>
+    <Router>
+      <div className=""></div>
+
+      <Route exact path="/" component={SignIn}></Route>
+    </Router>
   );
 }
 
