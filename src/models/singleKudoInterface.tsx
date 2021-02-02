@@ -1,7 +1,7 @@
 export interface SingleKudoReceived {
   giverImg: string;
-  giversName: string;
-  giversUserName: string;
+  giverName: string;
+  giverUserName: string;
   kudo: string;
   date: number;
 }

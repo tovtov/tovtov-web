@@ -4,13 +4,7 @@ import { SingleKudoReceived } from "../../models/singleKudoInterface";
 import { toReadableDate } from "../../database/userData";
 
 const Kudo: FunctionComponent<SingleKudoReceived> = (SingleKudoReceived) => {
-  const {
-    kudo,
-    date,
-    giversUserName,
-    giversName,
-    giverImg,
-  } = SingleKudoReceived;
+  const { kudo, date, giverUserName, giverName, giverImg } = SingleKudoReceived;
 
   return (
     <div
@@ -27,8 +21,8 @@ const Kudo: FunctionComponent<SingleKudoReceived> = (SingleKudoReceived) => {
           <div className="kudoDetails">
             <div className="tile">
               <span className="has-text-weight-light">
-                <strong> {giversName}</strong>
-                <span>{giversUserName}</span>
+                <strong> {giverName}</strong>
+                <span>{giverUserName}</span>
                 <span> • </span>
                 <span> {toReadableDate(date)}</span>
               </span>

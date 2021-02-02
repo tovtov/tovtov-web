@@ -21,15 +21,15 @@ export const UserData: Array<User> = [
     kudosReceived: [
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",
-        giversName: "giver",
-        giversUserName: "@giver",
+        giverName: "giver",
+        giverUserName: "@giver",
         kudo: "heres some props!",
         date: 1546108200,
       },
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",
-        giversName: "giver2",
-        giversUserName: "@giver2",
+        giverName: "giver2",
+        giverUserName: "@giver2",
         kudo: "making things happen!",
         date: 1546108200,
       },
