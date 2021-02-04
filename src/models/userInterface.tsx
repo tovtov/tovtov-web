@@ -1,8 +1,13 @@
 import { SingleKudoReceived, SingleKudoGiven } from "./singleKudoInterface";
 export interface User {
+  id: number;
   userImg: string;
   userName: string;
   fullName: string;
-  kudosReceived: SingleKudoReceived[];
-  kudosGiven: SingleKudoGiven[];
+}
+
+export interface UserData {
+  id: number;
+  kudosReceived: SingleKudoReceived[] | undefined;
+  kudosGiven: SingleKudoGiven[] | undefined;
 }

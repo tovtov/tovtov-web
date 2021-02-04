@@ -1,15 +1,61 @@
-import { User } from "../models/userInterface";
+import { User, UserData } from "../models/userInterface";
 
 //this file is dummy code until I have actual data to replcae it
 export const toReadableDate = (date: number) => {
   return new Date(date * 1000).toLocaleDateString();
 };
 
-export const UserData: Array<User> = [
+export const LoginUser: Array<User> = [
   {
+    id: 1,
     userImg: "https://bulma.io/images/placeholders/128x128.png",
-    userName: "@testName",
-    fullName: "test name",
+    userName: "@tyannarae",
+    fullName: "Tyanna Veltman",
+  },
+  {
+    id: 2,
+    userImg: "https://bulma.io/images/placeholders/128x128.png",
+    userName: "@baveltman",
+    fullName: "Boris Veltman",
+  },
+  {
+    id: 3,
+    userImg: "https://bulma.io/images/placeholders/128x128.png",
+    userName: "@thirduser",
+    fullName: "third user",
+  },
+];
+
+export const UserInfo: Array<UserData> = [
+  {
+    id: 1,
+    kudosGiven: [
+      {
+        date: 1546108200,
+        givenToUserName: "@baveltman",
+        givenToName: "Boris Veltman",
+        kudo: "kudos given to you!",
+      },
+    ],
+    kudosReceived: [
+      {
+        giverImg: "https://bulma.io/images/placeholders/128x128.png",
+        giverName: "giver",
+        giverUserName: "@baveltman",
+        kudo: "heres some props!",
+        date: 1546108200,
+      },
+      {
+        giverImg: "https://bulma.io/images/placeholders/128x128.png",
+        giverName: "giver2",
+        giverUserName: "@snowveltman",
+        kudo: "wow food on the table!",
+        date: 1546108200,
+      },
+    ],
+  },
+  {
+    id: 2,
     kudosGiven: [
       {
         date: 1546108200,
@@ -22,15 +68,15 @@ export const UserData: Array<User> = [
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",
         giverName: "giver",
-        giverUserName: "@giver",
-        kudo: "heres some props!",
+        giverUserName: "@pickleveltman",
+        kudo: "bark!",
         date: 1546108200,
       },
       {
         giverImg: "https://bulma.io/images/placeholders/128x128.png",
         giverName: "giver2",
-        giverUserName: "@giver2",
-        kudo: "making things happen!",
+        giverUserName: "@dollyveltman",
+        kudo: "cat giving kudos",
         date: 1546108200,
       },
     ],
