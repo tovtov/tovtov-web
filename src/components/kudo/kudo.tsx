@@ -1,10 +1,13 @@
 import React, { FunctionComponent } from "react";
-import "./kudo.scss";
-import { SingleKudoReceived } from "../../models/singleKudoInterface";
 import { toReadableDate } from "../../database/userData";
+import { KudoReceived } from "../../models/kudosReceivedInterface";
+import "./kudo.scss";
 
-const Kudo: FunctionComponent<SingleKudoReceived> = (SingleKudoReceived) => {
-  const { kudo, date, giverUserName, giverName, giverImg } = SingleKudoReceived;
+const Kudo: FunctionComponent<KudoReceived> = (Kudo) => {
+  const { giver, date, text } = Kudo;
+  const image = giver.image;
+  const username = giver.username;
+  const name = giver.name;
 
   return (
     <div
@@ -13,7 +16,7 @@ const Kudo: FunctionComponent<SingleKudoReceived> = (SingleKudoReceived) => {
     >
       <div className="tile is-parent is-1 media-left">
         <div className="image is-64x64">
-          <img src={giverImg} alt="kudo giver img" />
+          <img src={image} alt="kudo giver img" />
         </div>
       </div>
       <div className="tile is-11 is-vertical is-parent">
@@ -21,15 +24,16 @@ const Kudo: FunctionComponent<SingleKudoReceived> = (SingleKudoReceived) => {
           <div className="kudoDetails">
             <div className="tile">
               <span className="has-text-weight-light">
-                <strong> {giverName}</strong>
-                <span>{giverUserName}</span>
+                <strong> {name} </strong>
+                <span> • </span>
+                <span>{username}</span>
                 <span> • </span>
                 <span> {toReadableDate(date)}</span>
               </span>
             </div>
           </div>
         </div>
-        <div className="tile kudoParagraph">{kudo}</div>
+        <div className="tile kudoParagraph">{text}</div>
       </div>
     </div>
   );

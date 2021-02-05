@@ -4,6 +4,7 @@ import "./gravatar.scss";
 export interface GravatarProps {
   userImg: string;
 }
+
 const Gravatar: FunctionComponent<GravatarProps> = (GravatarProps) => {
   const { userImg } = GravatarProps;
   return (

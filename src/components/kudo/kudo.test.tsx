@@ -3,10 +3,15 @@ import { render, screen } from "@testing-library/react";
 import Kudo from "./kudo";
 
 const SingleKudo = {
-  giverImg: "https://bulma.io/images/placeholders/128x128.png",
-  giversName: "testName",
-  giversUserName: "@testUserName",
-  kudo: "some string of words",
+  id: "id",
+  giver: {
+    id: "id",
+    image: "",
+    name: "testName",
+    username: "@testUserName",
+    email: "",
+  },
+  text: "some string of words",
   date: 1546108200,
 };
 describe("Kudo", () => {

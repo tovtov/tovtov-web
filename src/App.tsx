@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import ProfilePage from "./pages/profilePage/profilePage";
 import "./App.scss";
 

@@ -5,8 +5,8 @@ import "./profileHeader.scss";
 export interface ProfileHeaderProps {
   userImg: string;
   fullName: string;
-  kudosReceivedCounter: number | undefined;
-  kudosGivenCounter: number | undefined;
+  kudosReceivedCounter: number;
+  kudosGivenCounter: number;
 }
 
 const ProfileHeader: FunctionComponent<ProfileHeaderProps> = (
@@ -18,24 +18,23 @@ const ProfileHeader: FunctionComponent<ProfileHeaderProps> = (
     kudosReceivedCounter,
     kudosGivenCounter,
   } = profileHeaderProps;
-
+  console.log("ProfileHeaderProps", profileHeaderProps);
   return (
     <div className="container is-fullhd" data-testid="profileHeaderComp">
       <Gravatar userImg={userImg} />
-
       <nav className="navbar is-dark topNav">
         <div className="navbar-item userName">{fullName}</div>
       </nav>
       <nav className="navbar tile is-white-ter">
         <div className="kudosNav tile is-vertical is-4">
           <span className="tile has-text-weight-semibold">
-            {kudosReceivedCounter === undefined ? 0 : kudosReceivedCounter}
+            {kudosReceivedCounter}
           </span>
           <span className="tile has-text-weight-light">Kudos Recieved </span>
         </div>
         <div className="kudosNav tile is-vertical is-3">
           <span className="tile has-text-weight-semibold">
-            {kudosGivenCounter === undefined ? 0 : kudosGivenCounter}
+            {kudosGivenCounter}
           </span>
           <span className="tile has-text-weight-light">Kudos Given </span>
         </div>
