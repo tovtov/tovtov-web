@@ -11,7 +11,7 @@ const Gravatar: FunctionComponent<GravatarProps> = (GravatarProps) => {
     <figure className="userImg image is-128x128 is-child is-vertical">
       <img
         data-testid="userImg"
-        className="is-rounded is-primary"
+        className=" imgBorder is-rounded"
         src={userImg}
         alt="userPhoto"
       />

@@ -1,28 +1,37 @@
+@import "../../styles/colors.scss";
+
 .container {
   position: relative;
 }
-
 .navbar {
   display: flex;
   z-index: 1;
 }
 .topNav {
+  color: white;
+  background-color: $primary;
   height: 6em;
 }
-.userName {
-  padding-left: 9em;
-  height: 100%;
+.item {
   display: flex;
   align-items: flex-end;
 }
-.kudosNav {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 
-@media screen and (max-width: 900px) {
-  .navbar {
-    padding-top: 3em;
-  }
+.firstNavItem {
+  padding-left: 9em;
 }
+.userName {
+  color: white;
+  height: 100%;
+}
+.num {
+  font-weight: 800;
+  border-bottom: 0.1em solid $slackLightGrey;
+}
+.tag1 {
+  padding-left: 8.5em;
+}
+.counter {
+  display: grid;
+}
+@import "../../index.scss";

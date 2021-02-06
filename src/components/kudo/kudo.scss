@@ -1,4 +1,5 @@
 .kudoContainer {
+  background-color: white;
   margin-top: 2em;
 }
 .kudoDetails {
@@ -6,4 +7,11 @@
 }
 .kudoParagraph {
   text-align: initial;
+}
+.date {
+  font-weight: lighter;
+  font-size: 0.9em;
+}
+.img {
+  border-radius: 0.2em;
 }

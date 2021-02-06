@@ -14,21 +14,18 @@ const Kudo: FunctionComponent<KudoReceived> = (Kudo) => {
       data-testid="kudoContainer"
       className="kudoContainer notification box tile "
     >
-      <div className="tile is-parent is-1 media-left">
+      <div className=" is-1 media-left">
         <div className="image is-64x64">
-          <img src={image} alt="kudo giver img" />
+          <img className="img" src={image} alt="kudo giver img" />
         </div>
       </div>
       <div className="tile is-11 is-vertical is-parent">
         <div className="tile">
           <div className="kudoDetails">
-            <div className="tile">
+            <div className="tile ">
               <span className="has-text-weight-light">
                 <strong> {name} </strong>
-                <span> • </span>
-                <span>{username}</span>
-                <span> • </span>
-                <span> {toReadableDate(date)}</span>
+                <span className="date"> {toReadableDate(date)}</span>
               </span>
             </div>
           </div>

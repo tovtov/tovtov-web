@@ -22,23 +22,22 @@ const ProfileHeader: FunctionComponent<ProfileHeaderProps> = (
   return (
     <div className="container is-fullhd" data-testid="profileHeaderComp">
       <Gravatar userImg={userImg} />
-      <nav className="navbar is-dark topNav">
-        <div className="navbar-item userName">{fullName}</div>
+      <nav className="navbar topNav navbar-item">
+        <strong className="item userName firstNavItem">{fullName}</strong>
       </nav>
-      <nav className="navbar tile is-white-ter">
-        <div className="kudosNav tile is-vertical is-4">
-          <span className="tile has-text-weight-semibold">
-            {kudosReceivedCounter}
-          </span>
-          <span className="tile has-text-weight-light">Kudos Recieved </span>
+
+      <div className="navbar firstNavItem">
+        <div className="navbar-item ">
+          <div className="counter">
+            <div className="num">{kudosReceivedCounter}</div> Gifted
+          </div>
         </div>
-        <div className="kudosNav tile is-vertical is-3">
-          <span className="tile has-text-weight-semibold">
-            {kudosGivenCounter}
-          </span>
-          <span className="tile has-text-weight-light">Kudos Given </span>
+        <div className="navbar-item">
+          <div className="counter">
+            <div className="num">{kudosGivenCounter}</div> Given
+          </div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 };
