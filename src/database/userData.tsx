@@ -46,7 +46,7 @@ export const UserInfo: Array<KudoReceived> = [
       name: "Boris Veltman",
       email: "blllaaah@gmail.com",
     },
-    text: "some text here",
+    text: "some text here. smgdhdfs skjhdfsuye skehw in ksb ksd dhib sdksdj.",
     date: 1546108200,
   },
   {

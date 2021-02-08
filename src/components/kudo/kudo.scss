@@ -2,16 +2,29 @@
   background-color: white;
   margin-top: 2em;
 }
-.kudoDetails {
-  text-align: left;
-}
 .kudoParagraph {
   text-align: initial;
 }
 .date {
   font-weight: lighter;
-  font-size: 0.9em;
+  font-size: 70%;
+  margin: 0.5em;
 }
 .img {
   border-radius: 0.2em;
+}
+.kudoDetails {
+  display: flex;
+}
+.nameAndDate {
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  .notification {
+    padding: 0.25rem 0.5rem 0.5rem 0.25rem;
+  }
+  .date {
+    display: none;
+  }
 }

@@ -6,7 +6,6 @@ import "./kudo.scss";
 const Kudo: FunctionComponent<KudoReceived> = (Kudo) => {
   const { giver, date, text } = Kudo;
   const image = giver.image;
-  const username = giver.username;
   const name = giver.name;
 
   return (
@@ -14,23 +13,23 @@ const Kudo: FunctionComponent<KudoReceived> = (Kudo) => {
       data-testid="kudoContainer"
       className="kudoContainer notification box tile "
     >
-      <div className=" is-1 media-left">
-        <div className="image is-64x64">
-          <img className="img" src={image} alt="kudo giver img" />
-        </div>
-      </div>
-      <div className="tile is-11 is-vertical is-parent">
-        <div className="tile">
-          <div className="kudoDetails">
-            <div className="tile ">
-              <span className="has-text-weight-light">
-                <strong> {name} </strong>
+      <div className="">
+        <div className="tile is-parent kudoDetails">
+          <div className="media-left">
+            <div className=" tile image is-64x64">
+              <img className="img" src={image} alt="kudo giver img" />
+            </div>
+          </div>
+          <div className="">
+            <div className="">
+              <span className="tile nameAndDate">
+                <span className=""> {name} </span>
                 <span className="date"> {toReadableDate(date)}</span>
               </span>
             </div>
+            <div className="tile kudoParagraph">{text}</div>
           </div>
         </div>
-        <div className="tile kudoParagraph">{text}</div>
       </div>
     </div>
   );
