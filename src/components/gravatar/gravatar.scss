@@ -1,0 +1,16 @@
+@import "bulma/css/bulma.css";
+@import "../../index.scss";
+@import "../../styles/colors.scss";
+
+.imgBorder {
+  border-color: $primary !important; //overriding a bulma style that is imbedded in the is-rounded class name
+}
+
+.userImg {
+  position: absolute;
+  z-index: 20;
+  margin: 0.5em;
+}
+.is-rounded {
+  border: 6px solid;
+}
