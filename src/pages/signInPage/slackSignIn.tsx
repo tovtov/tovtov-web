@@ -1,8 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
-import SlackButton from "../media/slack/sign_in_with_slack.png";
-import styles from "./slackSignIn.scss";
+import SlackButton from "../../media/slack/sign_in_with_slack.png";
+import * as styles from "./slackSignIn.scss";
 
 const SignIn = () => {
   const setIsHover = () => {

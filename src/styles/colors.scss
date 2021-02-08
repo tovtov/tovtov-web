@@ -1,0 +1,15 @@
+// @import "bulma/sass/helpers/color.sass";
+// @import "bulma/css/bulma.css";
+
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions.sass";
+$slackPurple: #350e36;
+$slackGreen: #007a5a;
+$slackGrey: #606060;
+$slackLightGrey: #dddddd;
+
+//reassigning our global colors to bulma scss variables
+$primary: $slackPurple;
+$link: $slackGreen;
+
+@import "../../node_modules/bulma/sass/utilities/_all.sass";

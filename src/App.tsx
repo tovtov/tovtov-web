@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import ProfilePage from "./pages/profilePage/profilePage";
+import SignIn from "./pages/signInPage/slackSignIn";
 import "./App.scss";
-import SignIn from "./components/slackSignIn";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className=""></div>
-
-      <Route exact path="/" component={SignIn}></Route>
+      <Route exact path="/" component={ProfilePage}></Route>
+      <Route exact path="/hello" component={SignIn}></Route>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,37 @@
+@import "../../styles/colors.scss";
+
+.container {
+  position: relative;
+}
+.navbar {
+  display: flex;
+  z-index: 1;
+}
+.topNav {
+  color: white;
+  background-color: $primary;
+  height: 6em;
+}
+.item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.firstNavItem {
+  padding-left: 9em;
+}
+.userName {
+  color: white;
+  height: 100%;
+}
+.num {
+  font-weight: 800;
+  border-bottom: 0.1em solid $slackLightGrey;
+}
+.tag1 {
+  padding-left: 8.5em;
+}
+.counter {
+  display: grid;
+}
+@import "../../index.scss";
