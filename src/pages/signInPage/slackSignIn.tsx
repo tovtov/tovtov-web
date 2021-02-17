@@ -9,19 +9,21 @@ export interface SigninProps {
 const setIsHover = () => {
   return styles[`is-active`];
 };
+//details needed accoridng to slack oath instructions
 let client_id: string = "33336676.569200954261";
 let scope: string = "incoming-webhook";
 const slackRedirectUrl: string = `https://slack.com/oauth/v2/authorize?scope=${scope}&client_id=${client_id}`;
 
 const slackRedirect = () => {
-  console.log(slackRedirectUrl);
+  //not eactly sure how to implement slacksign in here..?
+  return slackRedirectUrl;
 };
 export const SignIn: FunctionComponent<SigninProps> = ({ onClick }) => {
   return (
     <div className="container is-widescreen outterContainer is-success">
       <div className="card signBox">
         <div className="title is-4">Welcome back!</div>
-        <div onClick={slackRedirect}>
+        <div data-testid="slackSignin" onClick={slackRedirect}>
           <img
             className="slackBtn"
             data-testid="img"
