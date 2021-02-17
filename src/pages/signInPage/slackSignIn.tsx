@@ -4,7 +4,7 @@ import SlackButton from "../../media/slack/sign_in_with_slack.png";
 import * as styles from "./slackSignIn.scss";
 
 export interface SigninProps {
-  onClick: (e: React.MouseEvent) => void;
+  // onClick: (e: React.MouseEvent) => void;
 }
 const setIsHover = () => {
   return styles[`is-active`];
@@ -18,7 +18,7 @@ const slackRedirect = () => {
   //not eactly sure how to implement slacksign in here..?
   return slackRedirectUrl;
 };
-export const SignIn: FunctionComponent<SigninProps> = ({ onClick }) => {
+export const SignIn: FunctionComponent<SigninProps> = () => {
   return (
     <div className="container is-widescreen outterContainer is-success">
       <div className="card signBox">
