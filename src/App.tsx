@@ -7,7 +7,6 @@ import "./App.scss";
 const App = () => {
   return (
     <Router>
-      <div className=""></div>
       <Route exact path="/" component={ProfilePage}></Route>
       <Route exact path="/hello" component={SignIn}></Route>
     </Router>
