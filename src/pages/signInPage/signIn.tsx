@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import SlackButton from "../../media/slack/sign_in_with_slack.png";
-import * as styles from "./slackSignIn.scss";
+import * as styles from "./signIn.scss";
 
 export interface SigninProps {
   // onClick: (e: React.MouseEvent) => void;

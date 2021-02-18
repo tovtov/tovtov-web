@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProfilePage from "./pages/profilePage/profilePage";
-import SignIn from "./pages/signInPage/slackSignIn";
+import SignIn from "./pages/signInPage/signIn";
 import "./App.scss";
 
 const App = () => {
