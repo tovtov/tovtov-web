@@ -13,7 +13,9 @@
   border-bottom: none;
   padding: 0;
 }
-
+.signup:hover {
+  color: $slackGrey;
+}
 .linkContainer {
   padding: 1em;
   display: flex;

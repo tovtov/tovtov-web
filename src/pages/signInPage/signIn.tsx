@@ -1,15 +1,12 @@
 import React, { FunctionComponent } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import SlackButton from "../../media/slack/sign_in_with_slack.png";
-import * as styles from "./signIn.scss";
+import "./signIn.scss";
 
 export interface SigninProps {
   // onClick: (e: React.MouseEvent) => void;
 }
-const setIsHover = () => {
-  return styles[`is-active`];
-};
-//details needed accoridng to slack oath instructions
+
 let client_id: string = "33336676.569200954261";
 let scope: string = "incoming-webhook";
 const slackRedirectUrl: string = `https://slack.com/oauth/v2/authorize?scope=${scope}&client_id=${client_id}`;
@@ -36,13 +33,7 @@ export const SignIn: FunctionComponent<SigninProps> = () => {
           <div className="linkDivider"> Don't have an account yet? </div>
           <Router>
             <Link className="links" to="/sign-up">
-              <li
-                onMouseOver={() => {
-                  setIsHover();
-                }}
-              >
-                Sign up
-              </li>
+              <li className="signup">Sign up</li>
             </Link>
           </Router>
         </div>
