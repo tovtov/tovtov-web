@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import SlackButton from "../../media/slack/sign_in_with_slack.png";
 import "./signIn.scss";
 
@@ -19,7 +18,7 @@ export const SignIn: FunctionComponent<SigninProps> = () => {
   return (
     <div className="container is-widescreen outterContainer is-success">
       <div className="card signBox">
-        <div className="title is-4">Welcome back!</div>
+        <div className="title is-4">Greetings from Tovtov!</div>
         <div data-testid="slackSignin" onClick={slackRedirect}>
           <img
             className="slackBtn"
@@ -28,14 +27,9 @@ export const SignIn: FunctionComponent<SigninProps> = () => {
             alt="slackbutton"
           />
         </div>
-
-        <div className="linkContainer tabs is-centered">
-          <div className="linkDivider"> Don't have an account yet? </div>
-          <Router>
-            <Link className="links" to="/sign-up">
-              <li className="signup">Sign up</li>
-            </Link>
-          </Router>
+        <div className="howToSignIn">
+          Don't have an account yet? Don't worry! Go ahead and click the sign in
+          button above.
         </div>
       </div>
     </div>

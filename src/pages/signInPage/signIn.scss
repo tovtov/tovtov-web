@@ -5,9 +5,7 @@
 .outterContainer {
   margin-top: 18em;
 }
-.linkDivider {
-  padding: 0.5rem 0.75rem;
-}
+
 .tabs a {
   color: $slackBlue;
   border-bottom: none;
@@ -16,10 +14,9 @@
 .signup:hover {
   color: $slackGrey;
 }
-.linkContainer {
-  padding: 1em;
-  display: flex;
-  justify-content: center;
+.howToSignIn {
+  font-size: 0.75em;
+  padding: 1.3em;
 }
 .signBox {
   border: 2px solid;
@@ -64,8 +61,14 @@
     margin-top: 18em;
   }
 }
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .outterContainer {
-    margin-top: 20em;
+    margin-top: 23em;
+  }
+}
+//
+@media screen and (min-width: 1024px) {
+  .outterContainer {
+    margin-top: 17em;
   }
 }
