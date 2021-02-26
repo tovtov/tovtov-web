@@ -5,8 +5,10 @@
 @import "../../node_modules/bulma/sass/utilities/functions.sass";
 $slackPurple: #350e36;
 $slackGreen: #007a5a;
+$slackBrightGreen: #2eb67d;
 $slackGrey: #606060;
 $slackLightGrey: #dddddd;
+$slackBlue: #36c5f0;
 
 //reassigning our global colors to bulma scss variables
 $primary: $slackPurple;
