@@ -12,6 +12,9 @@ const ProfilePage: FunctionComponent = () => {
   const [counters] = useState(CountersData);
   const { image, name } = user[1];
   const { received, given } = counters[0];
+  const [page, setPage] = useState(1);
+  const [totalPages] = useState(UserInfo.length / 1);
+  const [currentPagesKudos, setCurrentPageKudos] = useState(kudoReceived); //figure out how to pass 3 kudos per page
 
   return (
     <div>
@@ -34,8 +37,12 @@ const ProfilePage: FunctionComponent = () => {
             ))
           )}
         </div>
+        <Pagination
+          currentPage={page}
+          totalPages={totalPages}
+          setCurrentPage={setPage}
+        />
       </section>
-      <Pagination />
     </div>
   );
 };
