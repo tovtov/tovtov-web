@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import ProfileHeader from "../../components/profileHeader/profileHeader";
 import Kudo from "../../components/kudo/kudo";
+import Pagination from "../../components/pagination/pagination";
 import { KudoReceived } from "../../models/kudosReceivedInterface";
 import { LoginUser, UserInfo, CountersData } from "../../database/userData";
 import "./profilePage.scss";
@@ -34,6 +35,7 @@ const ProfilePage: FunctionComponent = () => {
           )}
         </div>
       </section>
+      <Pagination />
     </div>
   );
 };
