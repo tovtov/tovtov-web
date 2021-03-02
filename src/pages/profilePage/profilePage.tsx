@@ -15,10 +15,12 @@ const ProfilePage: FunctionComponent = () => {
   const { received, given } = counters[0];
   const [page, setPage] = useState(1);
   const [totalPages] = useState(UserInfo.length / itemsPerPage);
-  const [lastKudoDisplayed, setLastKudosDisplayed] = useState(0);
-  const [kudosDisplayed, setKudosDisplayed] = useState(
-    kudoReceived.slice(0, itemsPerPage)
-  );
+
+  // Get current posts
+  const indexOfLastPost = page * itemsPerPage;
+  const indexOfFirstPost = indexOfLastPost - itemsPerPage;
+  const kudosDisplayed = kudoReceived.slice(indexOfFirstPost, indexOfLastPost);
+  console.log(kudosDisplayed);
 
   const kudosToDisplay = (received: number) => {
     if (received === 0) {
@@ -49,11 +51,9 @@ const ProfilePage: FunctionComponent = () => {
           <div> Looks like there is nothing here yet! </div>
         )}
         <Pagination
-          lastKudoDisplayed={lastKudoDisplayed}
           currentPage={page}
           totalPages={totalPages}
           setCurrentPage={setPage}
-          setLastKudosDisplayed={setLastKudosDisplayed}
           itemsPerPage={itemsPerPage}
         />
       </section>

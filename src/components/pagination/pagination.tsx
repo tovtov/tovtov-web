@@ -8,35 +8,28 @@ export interface PaginationProps {
   currentPage: number;
   totalPages: number;
   setCurrentPage: (page: number) => void;
-  lastKudoDisplayed: number;
-  setLastKudosDisplayed: (item: number) => void;
   itemsPerPage: number;
 }
 
 const Pagination: FunctionComponent<PaginationProps> = ({
-  lastKudoDisplayed,
   totalPages,
   currentPage,
   itemsPerPage,
   setCurrentPage,
-  setLastKudosDisplayed,
 }) => {
-  console.log("currentPage:", currentPage);
   const pagForward = (lastPageYet: boolean) => {
     if (lastPageYet) {
-      setCurrentPage(currentPage + 1); //havent hit the end yet add 1
-      setLastKudosDisplayed(itemsPerPage * currentPage); //update the last kudo
+      //havent hit the end yet add 1
+      setCurrentPage(currentPage + 1);
     }
   };
   const pagBackward = (firstPageYet: boolean) => {
     if (firstPageYet) {
       setCurrentPage(currentPage - 1);
-      setLastKudosDisplayed(currentPage - itemsPerPage);
     }
   };
   const exactPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
-    setLastKudosDisplayed(itemsPerPage * currentPage);
   };
   const startOfPages = (pageNum: number) => {
     if (pageNum === 1) {
