@@ -3,24 +3,19 @@ import classNames from "classnames";
 import "./pagination.scss";
 
 export interface PaginationProps {
-  onClick?: (e: React.MouseEvent) => void;
-  children?: ReactNode;
   currentPage: number;
   totalPages: number;
   setCurrentPage: (page: number) => void;
-  itemsPerPage: number;
 }
 
-const Pagination: FunctionComponent<PaginationProps> = ({
+export const Pagination: FunctionComponent<PaginationProps> = ({
   totalPages,
   currentPage,
-  itemsPerPage,
   setCurrentPage,
 }) => {
   const pagForward = (lastPageYet: boolean) => {
     if (lastPageYet) {
-      //havent hit the end yet add 1
-      setCurrentPage(currentPage + 1);
+      setCurrentPage(currentPage + 1); //havent hit the end yet add 1
     }
   };
   const pagBackward = (firstPageYet: boolean) => {
@@ -165,10 +160,23 @@ const Pagination: FunctionComponent<PaginationProps> = ({
     return (
       <li className={classNames([`pagination-list`])}>
         <div
-          className={classNames("pagination-link")}
+          className="pagination-previous"
+          data-testid="pagination-previous"
+          onClick={() => pagBackward(currentPage > 1)}
+        >
+          Previous
+        </div>
+        <div
+          className={classNames("pagination-link is-current")}
           aria-label={"Current Page " + currentPage}
         >
           {currentPage}
+        </div>
+        <div
+          className="pagination-next"
+          onClick={() => pagForward(currentPage < totalPages)}
+        >
+          Next
         </div>
       </li>
     );

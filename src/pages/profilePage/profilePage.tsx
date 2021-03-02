@@ -20,7 +20,6 @@ const ProfilePage: FunctionComponent = () => {
   const indexOfLastPost = page * itemsPerPage;
   const indexOfFirstPost = indexOfLastPost - itemsPerPage;
   const kudosDisplayed = kudoReceived.slice(indexOfFirstPost, indexOfLastPost);
-  console.log(kudosDisplayed);
 
   const kudosToDisplay = (received: number) => {
     if (received === 0) {
@@ -54,7 +53,6 @@ const ProfilePage: FunctionComponent = () => {
           currentPage={page}
           totalPages={totalPages}
           setCurrentPage={setPage}
-          itemsPerPage={itemsPerPage}
         />
       </section>
     </div>
