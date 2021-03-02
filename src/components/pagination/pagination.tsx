@@ -21,21 +21,16 @@ const Pagination: FunctionComponent<PaginationProps> = ({
   setCurrentPage,
   setLastKudosDisplayed,
 }) => {
+  console.log("currentPage:", currentPage);
   const pagForward = (lastPageYet: boolean) => {
     if (lastPageYet) {
-      setCurrentPage(currentPage + 1); //havent hit the end yet
-      setLastKudosDisplayed(itemsPerPage * currentPage);
-    } else {
-      setCurrentPage(totalPages);
-      setLastKudosDisplayed(itemsPerPage * currentPage);
-    } //no more pages to increase
+      setCurrentPage(currentPage + 1); //havent hit the end yet add 1
+      setLastKudosDisplayed(itemsPerPage * currentPage); //update the last kudo
+    }
   };
   const pagBackward = (firstPageYet: boolean) => {
     if (firstPageYet) {
       setCurrentPage(currentPage - 1);
-      setLastKudosDisplayed(currentPage - itemsPerPage);
-    } else {
-      setCurrentPage(1);
       setLastKudosDisplayed(currentPage - itemsPerPage);
     }
   };
@@ -44,33 +39,108 @@ const Pagination: FunctionComponent<PaginationProps> = ({
     setLastKudosDisplayed(itemsPerPage * currentPage);
   };
   const startOfPages = (pageNum: number) => {
-    if (pageNum > 1) {
+    if (pageNum === 1) {
       return (
-        <div
-          className="pagination-link"
-          aria-label={"Previous Page " + (currentPage - 1)}
-          onClick={() => exactPage(currentPage - 1)}
-        >
-          {currentPage - 1}
-        </div>
+        <ul className="pagination-list">
+          <li>
+            <div
+              className="pagination-link is-current"
+              aria-label={"Current Page "}
+              onClick={() => exactPage(currentPage)}
+            >
+              {currentPage}
+            </div>
+          </li>
+          <li>
+            <div
+              className="pagination-link"
+              aria-label={"next Page"}
+              onClick={() => exactPage(currentPage + 1)}
+            >
+              {currentPage + 1}
+            </div>
+          </li>
+          <li>
+            <div
+              className="pagination-link "
+              aria-label={"next next Page "}
+              onClick={() => exactPage(currentPage + 2)}
+            >
+              {currentPage + 2}
+            </div>
+          </li>
+        </ul>
       );
-    } else {
-      return null;
     }
   };
   const endOfPages = (pageNum: number) => {
-    if (pageNum < totalPages) {
+    if (pageNum === totalPages) {
       return (
-        <div
-          className="pagination-link"
-          aria-label={"Next Page " + (currentPage + 1)}
-          onClick={() => exactPage(currentPage + 1)}
-        >
-          {currentPage + 1}
-        </div>
+        <ul className="pagination-list">
+          <li>
+            <div
+              className="pagination-link"
+              aria-label={"Previous Previous Page "}
+              onClick={() => exactPage(currentPage - 2)}
+            >
+              {currentPage - 2}
+            </div>
+          </li>
+          <li>
+            <div
+              className="pagination-link"
+              aria-label={"Previous Page"}
+              onClick={() => exactPage(currentPage)}
+            >
+              {currentPage - 1}
+            </div>
+          </li>
+          <li>
+            <div
+              className="pagination-link is-current"
+              aria-label={"Current Page "}
+              onClick={() => exactPage(currentPage)}
+            >
+              {currentPage}
+            </div>
+          </li>
+        </ul>
       );
-    } else {
-      return null;
+    }
+  };
+  const middleOfPages = (pageNum: number) => {
+    if (pageNum !== 1 && pageNum !== totalPages) {
+      return (
+        <ul className="pagination-list">
+          <li>
+            <div
+              className="pagination-link"
+              aria-label={"Previous Page " + currentPage}
+              onClick={() => exactPage(currentPage - 1)}
+            >
+              {currentPage - 1}
+            </div>
+          </li>
+          <li>
+            <div
+              className="pagination-link is-current"
+              aria-label={"Current Page " + currentPage}
+              onClick={() => exactPage(currentPage)}
+            >
+              {currentPage}
+            </div>
+          </li>
+          <li>
+            <div
+              className="pagination-link"
+              aria-label={"Next Page " + currentPage}
+              onClick={() => exactPage(currentPage + 1)}
+            >
+              {currentPage + 1}
+            </div>
+          </li>
+        </ul>
+      );
     }
   };
   const displayMultiplePageNumbers = (totalPages: number) => {
@@ -79,7 +149,7 @@ const Pagination: FunctionComponent<PaginationProps> = ({
         <div
           className="pagination-previous"
           data-testid="pagination-previous"
-          onClick={() => pagBackward(currentPage > 2)}
+          onClick={() => pagBackward(currentPage > 1)}
         >
           Previous
         </div>
@@ -90,20 +160,9 @@ const Pagination: FunctionComponent<PaginationProps> = ({
         >
           Next
         </div>
-
-        <ul className="pagination-list">
-          <li>{startOfPages(currentPage)}</li>
-          <li>
-            <div
-              className="pagination-link  is-current"
-              aria-label={"Current Page " + currentPage}
-              onClick={() => exactPage(currentPage)}
-            >
-              {currentPage}
-            </div>
-          </li>
-          <li>{endOfPages(currentPage)}</li>
-        </ul>
+        {startOfPages(currentPage)}
+        {endOfPages(currentPage)}
+        {middleOfPages(currentPage)}
       </nav>
     );
   };
