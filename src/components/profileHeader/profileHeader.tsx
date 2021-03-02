@@ -18,7 +18,6 @@ const ProfileHeader: FunctionComponent<ProfileHeaderProps> = (
     kudosReceivedCounter,
     kudosGivenCounter,
   } = profileHeaderProps;
-  console.log("ProfileHeaderProps", profileHeaderProps);
   return (
     <div className="container is-fullhd" data-testid="profileHeaderComp">
       <Gravatar userImg={userImg} />

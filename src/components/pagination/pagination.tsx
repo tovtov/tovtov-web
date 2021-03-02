@@ -8,26 +8,42 @@ export interface PaginationProps {
   currentPage: number;
   totalPages: number;
   setCurrentPage: (page: number) => void;
+  lastKudoDisplayed: number;
+  setLastKudosDisplayed: (item: number) => void;
+  itemsPerPage: number;
 }
 
 const Pagination: FunctionComponent<PaginationProps> = ({
+  lastKudoDisplayed,
   totalPages,
   currentPage,
+  itemsPerPage,
   setCurrentPage,
+  setLastKudosDisplayed,
 }) => {
   const pagForward = (lastPageYet: boolean) => {
-    lastPageYet
-      ? setCurrentPage(currentPage + 1) //havent hit the end yet
-      : setCurrentPage(totalPages); //no more pages to increase
+    if (lastPageYet) {
+      setCurrentPage(currentPage + 1); //havent hit the end yet
+      setLastKudosDisplayed(itemsPerPage * currentPage);
+    } else {
+      setCurrentPage(totalPages);
+      setLastKudosDisplayed(itemsPerPage * currentPage);
+    } //no more pages to increase
   };
   const pagBackward = (firstPageYet: boolean) => {
-    firstPageYet ? setCurrentPage(currentPage - 1) : setCurrentPage(1);
+    if (firstPageYet) {
+      setCurrentPage(currentPage - 1);
+      setLastKudosDisplayed(currentPage - itemsPerPage);
+    } else {
+      setCurrentPage(1);
+      setLastKudosDisplayed(currentPage - itemsPerPage);
+    }
   };
   const exactPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
+    setLastKudosDisplayed(itemsPerPage * currentPage);
   };
   const startOfPages = (pageNum: number) => {
-    console.log("pageNum", pageNum < 1);
     if (pageNum > 1) {
       return (
         <div
