@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import classNames from "classnames";
 import "./pagination.scss";
 
@@ -13,19 +13,23 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
   currentPage,
   setCurrentPage,
 }) => {
+  //moves page forward 1
   const pagForward = (lastPageYet: boolean) => {
     if (lastPageYet) {
       setCurrentPage(currentPage + 1); //havent hit the end yet add 1
     }
   };
+  //moves page backwards 1
   const pagBackward = (firstPageYet: boolean) => {
     if (firstPageYet) {
       setCurrentPage(currentPage - 1);
     }
   };
+  //goes to exact page user clicks on
   const exactPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
+  //if currentpage is 1st page
   const startOfPages = (pageNum: number) => {
     if (pageNum === 1) {
       return (
@@ -61,6 +65,7 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
       );
     }
   };
+  //if currentpage is last page
   const endOfPages = (pageNum: number) => {
     if (pageNum === totalPages) {
       return (
@@ -96,6 +101,7 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
       );
     }
   };
+  //if currentpage is somewhere in the middle. *not first and not last page.
   const middleOfPages = (pageNum: number) => {
     if (pageNum !== 1 && pageNum !== totalPages) {
       return (
@@ -131,6 +137,7 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
       );
     }
   };
+  //if there are more 3 or more pages pagination will display multiple pages at once
   const displayMultiplePageNumbers = (totalPages: number) => {
     return (
       <nav className="pagination" role="navigation" aria-label="pagination">
@@ -155,7 +162,7 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
     );
   };
 
-  //if there is only one page
+  //if there are 2 pages of less pagination will only display the current page being viewed
   const displayOnlyCurrentPage = () => {
     return (
       <li className={classNames([`pagination-list`])}>

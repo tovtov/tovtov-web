@@ -16,7 +16,7 @@ const ProfilePage: FunctionComponent = () => {
   const [page, setPage] = useState(1);
   const [totalPages] = useState(UserInfo.length / itemsPerPage);
 
-  // Get current posts
+  // Get current kudos for this page
   const indexOfLastPost = page * itemsPerPage;
   const indexOfFirstPost = indexOfLastPost - itemsPerPage;
   const kudosDisplayed = kudoReceived.slice(indexOfFirstPost, indexOfLastPost);
