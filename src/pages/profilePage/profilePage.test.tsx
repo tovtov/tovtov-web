@@ -30,6 +30,10 @@ describe("PageProfile", () => {
     render(<PageProfile />);
     expect(screen.getByTestId("profileHeaderComp")).toBeDefined();
   });
+  it("PageProfile renders with Pagination component", () => {
+    render(<PageProfile />);
+    expect(screen.getAllByTestId("paginationComponent")).toBeDefined();
+  });
   it("PageProfile renders with text", () => {
     render(<PageProfile />);
     expect(screen.getAllByText("Kudos")).toBeDefined();
