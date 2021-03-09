@@ -17,9 +17,8 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
   const pageForward = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1); //havent hit the end yet add 1
-    }
-    if (currentPage > totalPages) {
-      //if the page number is ever more than total. always set it to total
+    } else {
+      //otherwise set it to total
       setCurrentPage(totalPages);
     }
   };
@@ -27,8 +26,7 @@ export const Pagination: FunctionComponent<PaginationProps> = ({
   const pageBackwards = () => {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
-    }
-    if (currentPage < 1) {
+    } else {
       // if the page num is ever less than 1 set it to be 1
       setCurrentPage(1);
     }
