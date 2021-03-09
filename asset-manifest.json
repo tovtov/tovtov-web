@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/tovtov/static/css/main.e32f3c14.chunk.css",
+    "main.js": "/tovtov/static/js/main.d0a9b7f0.chunk.js",
+    "main.js.map": "/tovtov/static/js/main.d0a9b7f0.chunk.js.map",
+    "runtime-main.js": "/tovtov/static/js/runtime-main.1aafce5f.js",
+    "runtime-main.js.map": "/tovtov/static/js/runtime-main.1aafce5f.js.map",
+    "static/css/2.71bed306.chunk.css": "/tovtov/static/css/2.71bed306.chunk.css",
+    "static/js/2.1ba1291e.chunk.js": "/tovtov/static/js/2.1ba1291e.chunk.js",
+    "static/js/2.1ba1291e.chunk.js.map": "/tovtov/static/js/2.1ba1291e.chunk.js.map",
+    "static/js/3.06f2a730.chunk.js": "/tovtov/static/js/3.06f2a730.chunk.js",
+    "static/js/3.06f2a730.chunk.js.map": "/tovtov/static/js/3.06f2a730.chunk.js.map",
+    "index.html": "/tovtov/index.html",
+    "static/css/2.71bed306.chunk.css.map": "/tovtov/static/css/2.71bed306.chunk.css.map",
+    "static/css/main.e32f3c14.chunk.css.map": "/tovtov/static/css/main.e32f3c14.chunk.css.map",
+    "static/js/2.1ba1291e.chunk.js.LICENSE.txt": "/tovtov/static/js/2.1ba1291e.chunk.js.LICENSE.txt",
+    "static/media/avatar1.b768253f.png": "/tovtov/static/media/avatar1.b768253f.png",
+    "static/media/avatar3.322c34b7.png": "/tovtov/static/media/avatar3.322c34b7.png",
+    "static/media/avatar5.03260db1.jpg": "/tovtov/static/media/avatar5.03260db1.jpg",
+    "static/media/avatar6.7f945fd6.jpg": "/tovtov/static/media/avatar6.7f945fd6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1aafce5f.js",
+    "static/css/2.71bed306.chunk.css",
+    "static/js/2.1ba1291e.chunk.js",
+    "static/css/main.e32f3c14.chunk.css",
+    "static/js/main.d0a9b7f0.chunk.js"
+  ]
+}
