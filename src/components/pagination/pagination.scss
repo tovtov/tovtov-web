@@ -1,0 +1,19 @@
+.pagination {
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 400px) {
+  .pagination {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 2em;
+    .pagination-next {
+      width: 37%;
+    }
+    .pagination-previous {
+      width: 37%;
+    }
+  }
+}
